@@ -53,7 +53,7 @@ To make the tool globally available on Linux, move it to a directory in your PAT
 sudo mv mdtoc /usr/bin
 ```
 
-*For other operating systems, check specific documentation on making a file executable globally. 🔍*
+*For other operating systems, check specific documentation on making a file executable globally. 🔍*<br>
 
 
 ## 🐍 Download Python Script
@@ -62,11 +62,11 @@ If you prefer to use the generator as a Python script, follow these steps:<br>
 
 #### ✅ Step 1: Download the Script
 
-Download the mdtoc file from the repository and rename it to mdtoc.py. 📝
+Download the mdtoc file from the repository and rename it to mdtoc.py. 📝<br>
 
 #### ✅ Step 2: Edit the Script
 
-Remove the first line of the file (#!/usr/bin/env python3) if it exists, as this is only needed for executables.
+Remove the first line of the file (#!/usr/bin/env python3) if it exists, as this is only needed for executables.<br>
 
 
 # 🛠️ Usage Instructions
@@ -81,7 +81,7 @@ In the markdown file where you want to generate the Table of Contents, insert th
 **MD-TOC**
 ```
 
-This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TOC** appears on the same line as text, the generator will overwrite it!
+This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TOC** appears on the same line as text, the generator will overwrite it!<br>
 
 ## ⚡ Running the Generator
 
