@@ -6,37 +6,45 @@ _A quick and easy tool to generate a **Table of Contents** for your markdown fil
 
 ## 📋 Table of Contents
 
-1. [🚀 Installation Guide](#installation-guide)<br>
-   - [✅ Step 1: Download the Executable](#step-1-download-the-executable)<br>
-   - [✅ Step 2: Make it Executable](#step-2-make-it-executable)<br>
-   - [✅ Step 3 (Optional): Global Access](#step-3-optional-global-access)<br>
-   - [🐍 Download Python Script](#download-python-script)<br>
-2. [🛠️ Usage Instructions](#usage-instructions)<br>
-   - [🖊️ Choosing ToC Location](#choosing-toc-location)<br>
-   - [⚡ Running the Generator](#running-the-generator)<br>
-3. [🎨 Example](#example)<br>
+1. [🚀 Installation Guide](#installation-guide)
+   - [✅ Step 1: Download the Executable](#step-1-download-the-executable)
+   - [✅ Step 2: Make it Executable](#step-2-make-it-executable)
+   - [✅ Step 3 (Optional): Global Access](#step-3-optional-global-access)
+   - [🐍 Download Python Script](#download-python-script)
+2. [🛠️ Usage Instructions](#usage-instructions)
+   - [🖊️ Choosing ToC Location](#choosing-toc-location)
+   - [⚡ Running the Generator](#running-the-generator)
+3. [🎨 Example](#example)
 
 ---
 
+<br>
+
 ## 🚀 Installation Guide
 
-The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.<br>
+The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.
+
+<br>
 
 ### 📦 Download Executable
 
-If you want to install the tool globally and easily, this is the best option for you.<br>
+If you want to install the tool globally and easily, this is the best option for you.
 
 #### ✅ Step 1: Download the Executable
 
-Head over to the repository and download the `mdtoc` executable file. 📥<br>
+Head over to the repository and download the `mdtoc` executable file. 📥
+
+<br>
 
 #### ✅ Step 2: Make it Executable
 
-Ensure the file is executable by running the following command in the directory where you've downloaded it:<br>
+Ensure the file is executable by running the following command in the directory where you've downloaded it:
 
 ```bash
 chmod +x mdtoc
 ```
+
+<br>
 
 
 ## 💡 Tip: You can check if the file is executable by running:
@@ -47,51 +55,68 @@ chmod +x mdtoc
 
 #### ✅ Step 3 (Optional): Global Access
 
-To make the tool globally available on Linux, move it to a directory in your PATH (like /usr/bin):<br>
+To make the tool globally available on Linux, move it to a directory in your PATH (like /usr/bin):
 
 ```bash
 sudo mv mdtoc /usr/bin
 ```
 
-*For other operating systems, check specific documentation on making a file executable globally. 🔍*<br>
+*For other operating systems, check specific documentation on making a file executable globally. 🔍*
+
+
+<br>
 
 
 ## 🐍 Download Python Script
 
-If you prefer to use the generator as a Python script, follow these steps:<br>
+If you prefer to use the generator as a Python script, follow these steps:
+
+<br>
 
 #### ✅ Step 1: Download the Script
 
-Download the mdtoc file from the repository and rename it to mdtoc.py. 📝<br>
+Download the mdtoc file from the repository and rename it to mdtoc.py. 📝
+
+<br>
 
 #### ✅ Step 2: Edit the Script
 
-Remove the first line of the file (#!/usr/bin/env python3) if it exists, as this is only needed for executables.<br>
+Remove the first line of the file `(#!/usr/bin/env python3)` if it exists, as this is only needed for executables.
+
+<br>
 
 
 # 🛠️ Usage Instructions
 
-Using the tool is incredibly simple! Just follow these two steps to add a **Table of Contents (ToC)** to your markdown file.<br>
+Using the tool is incredibly simple! Just follow these two steps to add a **Table of Contents (ToC)** to your markdown file.
+
+<br>
 
 #### 🖊️ Choosing ToC Location
 
-In the markdown file where you want to generate the Table of Contents, insert the following placeholder text:<br>
+In the markdown file where you want to generate the Table of Contents, insert the following placeholder text:
 
 ```markdown
 **MD-TOC**
 ```
 
-This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TOC** appears on the same line as text, the generator will overwrite it!<br>
+This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TOC** appears on the same line as text, the generator will overwrite it!
+
+<br>
 
 ## ⚡ Running the Generator
 
-Once you've added the ToC placeholder, run the generator using one of these commands:<br>
+Once you've added the ToC placeholder, run the generator using one of these commands:
+
+<br>
 
 #### 🌍 If using the executable:
 
 ```bash
 mdtoc <source_file> <dest_file>
 ```
+
+<br>
 
 #### 🐍 If using the Python script:
 
@@ -107,9 +132,11 @@ python mdtoc.py <source_file> <dest_file>
 
 *💡 Both `source_file` and `dest_file` can be the same if you want to insert the ToC into the same file.*
 
+<br>
+
 ## 🎨 Example
 
-Let's say you want to generate a ToC for this very README.md file. First, you would mark the location with the **MD-TOC** placeholder like this:<br>
+Let's say you want to generate a ToC for this very README.md file. First, you would mark the location with the **MD-TOC** placeholder like this:
 
 ```markdown
 # Project Documentation
