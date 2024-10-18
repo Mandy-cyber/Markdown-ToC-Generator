@@ -23,6 +23,7 @@ _A quick and easy tool to generate a **Table of Contents** for your markdown fil
 
 The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.
 
+
 ### 📦 Download Executable
 
 If you want to install the tool globally and easily, this is the best option for you.
@@ -40,7 +41,7 @@ chmod +x mdtoc
 ```
 
 
-## 💡 Tip: You can check if the file is executable by running:
+#### 💡 Tip: You can check if the file is executable by running:
 
 ```bash
 ./mdtoc --help
