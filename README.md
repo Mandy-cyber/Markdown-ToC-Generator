@@ -6,16 +6,17 @@ _A quick and easy tool to generate a **Table of Contents** for your markdown fil
 
 ## 📋 Table of Contents
 
-1. [🚀 Installation Guide](#installation-guide)
-   - [✅ Step 1: Download the Executable](#step-1-download-the-executable)
-   - [✅ Step 2: Make it Executable](#step-2-make-it-executable)
-   - [✅ Step 3 (Optional): Global Access](#step-3-optional-global-access)
-   - [🐍 Download Python Script](#download-python-script)
-2. [🛠️ Usage Instructions](#usage-instructions)
-   - [🖊️ Choosing ToC Location](#choosing-toc-location)
-   - [⚡ Running the Generator](#running-the-generator)
-3. [🎨 Example](#example)
-
+1. [🚀 Installation Guide](#-installation-guide)
+   - [✅ Step 1: Download the Executable](#-step-1-download-the-executable)
+   - [✅ Step 2: Make it Executable](#-step-2-make-it-executable)
+   - [✅ Step 3 (Optional): Global Access](#-step-3-optional-global-access)
+   - [🐍 Download Python Script](#-download-python-script)
+2. [🛠️ Usage Instructions](#️-usage-instructions)
+   - [🖊️ Choosing ToC Location](#️-choosing-toc-location)
+   - [⚡ Running the Generator](#-running-the-generator)
+3. [🎨 Example](#-example)
+4. [🔧 Additional Information](#-additional-information)
+5. [✨ Final Words](#-final-words)
 ---
 
 <br>
