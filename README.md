@@ -19,13 +19,9 @@ _A quick and easy tool to generate a **Table of Contents** for your markdown fil
 5. [✨ Final Words](#-final-words)
 ---
 
-<br>
-
 ## 🚀 Installation Guide
 
 The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.
-
-<br>
 
 ### 📦 Download Executable
 
@@ -35,8 +31,6 @@ If you want to install the tool globally and easily, this is the best option for
 
 Head over to the repository and download the `mdtoc` executable file. 📥
 
-<br>
-
 #### ✅ Step 2: Make it Executable
 
 Ensure the file is executable by running the following command in the directory where you've downloaded it:
@@ -44,8 +38,6 @@ Ensure the file is executable by running the following command in the directory 
 ```bash
 chmod +x mdtoc
 ```
-
-<br>
 
 
 ## 💡 Tip: You can check if the file is executable by running:
@@ -65,33 +57,23 @@ sudo mv mdtoc /usr/bin
 *For other operating systems, check specific documentation on making a file executable globally. 🔍*
 
 
-<br>
-
-
 ## 🐍 Download Python Script
 
 If you prefer to use the generator as a Python script, follow these steps:
-
-<br>
 
 #### ✅ Step 1: Download the Script
 
 Download the mdtoc file from the repository and rename it to mdtoc.py. 📝
 
-<br>
-
 #### ✅ Step 2: Edit the Script
 
 Remove the first line of the file `(#!/usr/bin/env python3)` if it exists, as this is only needed for executables.
-
-<br>
 
 
 # 🛠️ Usage Instructions
 
 Using the tool is incredibly simple! Just follow these two steps to add a **Table of Contents (ToC)** to your markdown file.
 
-<br>
 
 #### 🖊️ Choosing ToC Location
 
@@ -103,21 +85,15 @@ In the markdown file where you want to generate the Table of Contents, insert th
 
 This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TOC** appears on the same line as text, the generator will overwrite it!
 
-<br>
-
 ## ⚡ Running the Generator
 
 Once you've added the ToC placeholder, run the generator using one of these commands:
-
-<br>
 
 #### 🌍 If using the executable:
 
 ```bash
 mdtoc <source_file> <dest_file>
 ```
-
-<br>
 
 #### 🐍 If using the Python script:
 
@@ -132,8 +108,6 @@ python mdtoc.py <source_file> <dest_file>
 - `dest_file` → The markdown file where the ToC should be inserted.
 
 *💡 Both `source_file` and `dest_file` can be the same if you want to insert the ToC into the same file.*
-
-<br>
 
 ## 🎨 Example
 
