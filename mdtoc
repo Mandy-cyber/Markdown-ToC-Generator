@@ -156,10 +156,11 @@ def find_existing_toc(file_name: str) -> Tuple[int, int]:
     end_index = -1
 
     for i, line in enumerate(lines):
-        if '<!-- START OF MDTOC -->' in line:
+        line = line.replace(' ', '').lower()
+        if '<!--startofmdtoc-->' in line.strip():
             found_start = True
             start_index = i
-        if '<!-- END OF MDTOC -->' in line and found_start:
+        if '<!--endofmdtoc-->' in line and found_start:
             found_end = True
             end_index = i
             break
@@ -167,7 +168,7 @@ def find_existing_toc(file_name: str) -> Tuple[int, int]:
     if found_start and found_end:
         return start_index, end_index
     else:
-        print(f"Could not find <!-- START OF MDTOC --> and <!-- END OF MDTOC --> comments in {file_name}.")
+        print(f"Could not find <!-- START OF MDTOC --> and <!-- END OF MDTOC --> comments in {file_name}")
         return -1, -1
 
 
