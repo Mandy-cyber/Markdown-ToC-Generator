@@ -142,9 +142,9 @@ And voilà! 🎉 You now have a neatly organized and clickable ToC!
 
 - **Supported Markdown Headers**: The generator will include headers from # to ###### in the ToC.
 
-- **Customization**: Feel free to modify the code to adjust the ToC style (e.g., nested lists, numbering).
+- **[Customization](CONTRIBUTING.md):** Feel free to modify the code to adjust the ToC style (e.g., nested lists, numbering).
 
-- **Issues & Contributions**: If you encounter any issues or have ideas for improving the tool, please open a GitHub issue or submit a pull request. We welcome contributions! 🙌
+- **[Issues & Contributions](CONTRIBUTING.md):** If you encounter any issues or have ideas for improving the tool, please open a GitHub issue or submit a pull request. We welcome contributions! 🙌
 
 
 ## ✨ Final Words
