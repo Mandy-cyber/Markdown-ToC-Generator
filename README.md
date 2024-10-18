@@ -6,33 +6,33 @@ _A quick and easy tool to generate a **Table of Contents** for your markdown fil
 
 ## 📋 Table of Contents
 
-1. [🚀 Installation Guide](#installation-guide)
-   - [✅ Step 1: Download the Executable](#step-1-download-the-executable)
-   - [✅ Step 2: Make it Executable](#step-2-make-it-executable)
-   - [✅ Step 3 (Optional): Global Access](#step-3-optional-global-access)
-   - [🐍 Download Python Script](#download-python-script)
-2. [🛠️ Usage Instructions](#usage-instructions)
-   - [🖊️ Choosing ToC Location](#choosing-toc-location)
-   - [⚡ Running the Generator](#running-the-generator)
-3. [🎨 Example](#example)
+1. [🚀 Installation Guide](#installation-guide)<br>
+   - [✅ Step 1: Download the Executable](#step-1-download-the-executable)<br>
+   - [✅ Step 2: Make it Executable](#step-2-make-it-executable)<br>
+   - [✅ Step 3 (Optional): Global Access](#step-3-optional-global-access)<br>
+   - [🐍 Download Python Script](#download-python-script)<br>
+2. [🛠️ Usage Instructions](#usage-instructions)<br>
+   - [🖊️ Choosing ToC Location](#choosing-toc-location)<br>
+   - [⚡ Running the Generator](#running-the-generator)<br>
+3. [🎨 Example](#example)<br>
 
 ---
 
 ## 🚀 Installation Guide
 
-The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.
+The `mdtoc` tool can be installed in two ways: as a **standalone executable** or as a **Python script**.<br>
 
 ### 📦 Download Executable
 
-If you want to install the tool globally and easily, this is the best option for you.
+If you want to install the tool globally and easily, this is the best option for you.<br>
 
 #### ✅ Step 1: Download the Executable
 
-Head over to the repository and download the `mdtoc` executable file. 📥
+Head over to the repository and download the `mdtoc` executable file. 📥<br>
 
 #### ✅ Step 2: Make it Executable
 
-Ensure the file is executable by running the following command in the directory where you've downloaded it:
+Ensure the file is executable by running the following command in the directory where you've downloaded it:<br>
 
 ```bash
 chmod +x mdtoc
@@ -47,7 +47,7 @@ chmod +x mdtoc
 
 #### ✅ Step 3 (Optional): Global Access
 
-To make the tool globally available on Linux, move it to a directory in your PATH (like /usr/bin):
+To make the tool globally available on Linux, move it to a directory in your PATH (like /usr/bin):<br>
 
 ```bash
 sudo mv mdtoc /usr/bin
@@ -58,7 +58,7 @@ sudo mv mdtoc /usr/bin
 
 ## 🐍 Download Python Script
 
-If you prefer to use the generator as a Python script, follow these steps:
+If you prefer to use the generator as a Python script, follow these steps:<br>
 
 #### ✅ Step 1: Download the Script
 
@@ -71,11 +71,11 @@ Remove the first line of the file (#!/usr/bin/env python3) if it exists, as this
 
 # 🛠️ Usage Instructions
 
-Using the tool is incredibly simple! Just follow these two steps to add a **Table of Contents (ToC)** to your markdown file.
+Using the tool is incredibly simple! Just follow these two steps to add a **Table of Contents (ToC)** to your markdown file.<br>
 
 #### 🖊️ Choosing ToC Location
 
-In the markdown file where you want to generate the Table of Contents, insert the following placeholder text:
+In the markdown file where you want to generate the Table of Contents, insert the following placeholder text:<br>
 
 ```markdown
 **MD-TOC**
@@ -85,7 +85,7 @@ This is where the generator will place your beautiful ToC. 🌟 Note: If **MD-TO
 
 ## ⚡ Running the Generator
 
-Once you've added the ToC placeholder, run the generator using one of these commands:
+Once you've added the ToC placeholder, run the generator using one of these commands:<br>
 
 #### 🌍 If using the executable:
 
@@ -109,7 +109,7 @@ python mdtoc.py <source_file> <dest_file>
 
 ## 🎨 Example
 
-Let's say you want to generate a ToC for this very README.md file. First, you would mark the location with the **MD-TOC** placeholder like this:
+Let's say you want to generate a ToC for this very README.md file. First, you would mark the location with the **MD-TOC** placeholder like this:<br>
 
 ```markdown
 # Project Documentation
