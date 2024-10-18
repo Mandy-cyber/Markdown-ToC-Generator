@@ -135,11 +135,45 @@ def generate_toc(headings: Dict[str, int]) -> str:
         prev_level = level
 
     return toc_text
+
+
+def find_existing_toc(file_name: str) -> Tuple[int, int]:
+    """Finds an existing ToC in the given file (if one exists)
+
+    Args:
+        file_name: the name of the file with the ToC to remove
+    Returns:
+        the start and ending index of the existing ToC
+    """
+     # setup lines
+    lines = get_markdown(file_name)
+    lines = lines.splitlines()
+
+    # find lines of existing toc
+    found_start = False
+    found_end = False
+    start_index = -1
+    end_index = -1
+
+    for i, line in enumerate(lines):
+        if '<!-- START OF MDTOC -->' in line:
+            found_start = True
+            start_index = i
+        if '<!-- END OF MDTOC -->' in line and found_start:
+            found_end = True
+            end_index = i
+            break
     
+    if found_start and found_end:
+        return start_index, end_index
+    else:
+        print(f"Could not find <!-- START OF MDTOC --> and <!-- END OF MDTOC --> comments in {file_name}.")
+        return -1, -1
+
 
 def insert_toc(toc_text: str, file_name: str) -> bool:
-    """Insert the given table of contents in the file on
-    the line labelled "**MD-TOC**"
+    """Insert the given table of contents in the file between the
+    MDTOC comments.
 
     Args:
         toc_text: the table of contents generated in string format
@@ -147,25 +181,19 @@ def insert_toc(toc_text: str, file_name: str) -> bool:
     Returns:
         True if inserted successfully, False otherwise
     """
-    # setup & grab info
+    # setup
     lines = get_markdown(file_name)
-    line_num = 1
-    found = False
-    
-    # find where to insert toc
-    for line in lines.splitlines():
-        if line.startswith("**MD-TOC**"):
-            found = True
-            break
-        line_num += 1
-    
-    if not found:
-        print("Missing **MD-TOC** in destination file.")
-        return False
-    
-    # insert the toc
     lines = lines.splitlines()
-    lines[line_num-1:line_num] = toc_text.split('\n')
+    
+    # remove existing toc
+    start_idx, end_idx = find_existing_toc(file_name)
+    if start_idx == -1 and end_idx == -1: 
+        return False
+    del lines[start_idx:end_idx + 1]
+
+    # add toc with comments
+    toc_with_comments = ['<!-- START OF MDTOC -->', toc_text, '<!-- END OF MDTOC -->']
+    lines[start_idx:start_idx] = toc_with_comments
 
     # write and save modified file
     with open(file_name, 'w') as file:
