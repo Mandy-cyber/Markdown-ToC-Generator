@@ -20,13 +20,14 @@ def get_markdown(file_name: str) -> Optional[str]:
         print(e)
         return None
 
-def get_headings(markdown: str) -> Dict[str, int]:
+def get_headings(markdown: str, max_depth: int) -> Dict[str, int]:
     """Reads the given string of markdown and identifies
     each of the headings (#, ##, ###, etc) and their 
     nesting level. 
 
     Args:
         markdown: the markdown content
+        max_depth: the maximum depth/level of headings to include
     Returns:
         a dictionary where the keys are the headings and the
         values are the nest/indentation levels.
@@ -57,6 +58,10 @@ def get_headings(markdown: str) -> Dict[str, int]:
                     curr_level += 1
                 else: 
                     break
+
+            # ensure heading is within max depth    
+            if curr_level > max_depth:
+                continue
 
             # remove hashtags + add to dict
             heading = line[curr_level + 1:]
@@ -113,6 +118,7 @@ def generate_toc(headings: Dict[str, int]) -> str:
     # handle first heading separately
     first_heading = next(iter(headings))
     toc_text += format_heading(first_heading)
+    prev_level = headings[first_heading]
     del headings[first_heading]
 
     for heading, level in headings.items():
@@ -126,6 +132,7 @@ def generate_toc(headings: Dict[str, int]) -> str:
             curr_indent -= (prev_level - level)
         
         # calculate tab space 
+        curr_indent = max(0, curr_indent)
         tab_space = "    " * curr_indent
         toc_text += tab_space + txt
 
@@ -200,13 +207,12 @@ def insert_toc(toc_text: str, file_name: str) -> bool:
 
     return True
 
-def read_args() -> Tuple[str, str]:
+def read_args() -> tuple:
     """Read in the command-line arguments to determine the
     source and destination file
 
     Returns:
-        a tuple where the first item is the source file location,
-        and the second is the destination file location.
+        a tuple of valid parsed arguments
     """
     # setup parser
     parser = argparse.ArgumentParser(
@@ -214,24 +220,32 @@ def read_args() -> Tuple[str, str]:
             description='Generates a Table of Contents (ToC) for a markdown file',
     )
 
-    parser.add_argument('source', help="The markdown file to base the ToC on")
-    parser.add_argument('dest', help="The markdown file to insert the generated ToC in.")
+    # add arguments
+    parser.add_argument('source', help="the markdown file to base the ToC on")
+    parser.add_argument('dest', help="the markdown file to insert the generated ToC into")
+    parser.add_argument(
+        '-d', '--depth', 
+        help="the maximum depth/level of headings the ToC will include", 
+        type=int, default=6
+    )
     args = parser.parse_args()
     
     # check for valid arguments
     assert args.source.endswith(".md") and args.source != None, "The source file must be a markdown file"
     assert args.dest.endswith(".md") and args.dest != None, "The destination file must be a markdown file"
-    return args.source, args.dest
+    assert args.depth >= 1 and args.depth <= 6, "The depth must be between 1 and 6"
+
+    return args.source, args.dest, args.depth
 
 def run() -> None:
     """Runs MDTOC"""
     # grab markdown
-    source_file, dest_file = read_args()
+    source_file, dest_file, depth = read_args()
     markdown = get_markdown(source_file)
     if not markdown: return None
     
     # make table of contents
-    headings = get_headings(markdown)
+    headings = get_headings(markdown, depth)
     toc = generate_toc(headings)
     if insert_toc(toc, dest_file):
         print(f"Table of Contents generated successfully in {dest_file}")
