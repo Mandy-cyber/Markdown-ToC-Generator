@@ -22,7 +22,6 @@ def get_markdown(file_name: str) -> Optional[str]:
         print(e)
         return None
 
-
 def get_headings(markdown: str) -> Dict[str, int]:
     """Reads the given string of markdown and identifies
     each of the headings (#, ##, ###, etc) and their 
@@ -67,7 +66,6 @@ def get_headings(markdown: str) -> Dict[str, int]:
 
     return headings
 
-
 def format_heading(heading: str) -> str:
     """Formats the given heading to match the following:
         - [Heading Name](#link-to-heading)
@@ -100,7 +98,6 @@ def format_heading(heading: str) -> str:
 
     formatted += ")\n"
     return formatted
-
 
 def generate_toc(headings: Dict[str, int]) -> str:
     """Formats the given headers using their nesting levels
@@ -136,7 +133,6 @@ def generate_toc(headings: Dict[str, int]) -> str:
 
     return toc_text
 
-
 def find_existing_toc(file_name: str) -> Tuple[int, int]:
     """Finds an existing ToC in the given file (if one exists)
 
@@ -157,10 +153,12 @@ def find_existing_toc(file_name: str) -> Tuple[int, int]:
 
     for i, line in enumerate(lines):
         line = line.replace(' ', '').lower()
-        if '<!--startofmdtoc-->' in line.strip():
+        if '<!--startofmdtoc-->' in line:
+            # starting comment
             found_start = True
             start_index = i
         if '<!--endofmdtoc-->' in line and found_start:
+            # ending comment
             found_end = True
             end_index = i
             break
@@ -170,7 +168,6 @@ def find_existing_toc(file_name: str) -> Tuple[int, int]:
     else:
         print(f"Could not find <!-- START OF MDTOC --> and <!-- END OF MDTOC --> comments in {file_name}")
         return -1, -1
-
 
 def insert_toc(toc_text: str, file_name: str) -> bool:
     """Insert the given table of contents in the file between the
@@ -202,7 +199,6 @@ def insert_toc(toc_text: str, file_name: str) -> bool:
 
     return True
 
-
 def read_args() -> Tuple[str, str]:
     """Read in the command-line arguments to determine the
     source and destination file
@@ -225,7 +221,6 @@ def read_args() -> Tuple[str, str]:
     assert args.source.endswith(".md") and args.source != None, "The source file must be a markdown file"
     assert args.dest.endswith(".md") and args.dest != None, "The destination file must be a markdown file"
     return args.source, args.dest
-
 
 def run() -> None:
     """Runs MDTOC"""
