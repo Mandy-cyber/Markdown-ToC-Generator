@@ -1,5 +1,3 @@
-
-
 # 🌟 Contributing to Markdown-ToC-Generator
 
 ---
@@ -16,7 +14,7 @@ First off, thank you for taking the time to contribute! 🎉 Your contributions�
 - [Improving The Documentation](#improving-the-documentation)
 - [Styleguides](#-styleguides)
 - [Commit Messages](#commit-messages)
-- [Join The Project Team](#join-the-project-team)
+- [Get Contributing](#get-contributing)
 
 
 
@@ -24,7 +22,7 @@ First off, thank you for taking the time to contribute! 🎉 Your contributions�
 
 
 ---
-This project, and everyone involved, follows the [Code of Conduct](blob/master/CODE_OF_CONDUCT.md). **We care about fostering a positive and inclusive environment!** 🌈 Please treat others with kindness and respect while contributing. If you encounter any issues or unacceptable behavior, feel free to report it to us at `<>` or reach out directly to [@Mandy-cyber](https://github.com/Mandy-cyber). 😊
+This project, and everyone involved, follows the [Code of Conduct](blob/master/CODE_OF_CONDUCT.md). **We care about fostering a positive and inclusive environment!** 🌈 Please treat others with kindness and respect while contributing. If you encounter any issues or unacceptable behavior, please reach out directly to [@Mandy-cyber](https://github.com/Mandy-cyber) 😊.
 
 
 ## ❓ I Have a Question
@@ -57,7 +55,7 @@ When opening an issue:
 
 Before submitting a bug report, please:
 1. Ensure you're using the latest version.
-2. Check if it's already reported in the [issues](https://github.com/yourrepo/issues).
+2. Check if it's already reported in the [issues](https://github.com/Mandy-Cyber/Markdown-ToC-Generator/issues).
 3. Gather key info: stack trace, OS, platform, version, inputs, and outputs.
 
 How to submit a bug report:
@@ -74,7 +72,7 @@ How to submit a bug report:
 Before suggesting an enhancement:
 1. Make sure you're on the latest version.
 2. Check the [documentation](README.md) to see if it's already possible.
-3. Search [existing issues](https://github.com/yourrepo/issues) for similar suggestions.
+3. Search [existing issues](https://github.com/Mandy-Cyber/Markdown-ToC-Generator/issues) for similar suggestions.
 
 How to suggest an enhancement:
 - Use a descriptive title.
@@ -109,7 +107,7 @@ Fixes #[issue_number]: Short description of the fix
 - [ ] No new errors or warnings are introduced.
 
 
-## 🎉 Join The Project Team
+## 🎉  Get Contributing
 
----
-Interested in joining the team? Let us know! We’re always open to contributors willing to take on bigger roles in the project.
+Happy Coding! :heart:
+-Mandy
