@@ -195,7 +195,7 @@ def insert_toc(toc_text: str, file_name: str) -> bool:
     lines[start_idx:start_idx] = toc_with_comments
 
     # write and save modified file
-    with open(file_name, 'w') as file:
+    with open(file_name, 'w', encoding='utf-8') as file:
         file.write('\n'.join(lines))
 
     return True
