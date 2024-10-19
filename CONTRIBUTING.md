@@ -112,4 +112,4 @@ Fixes #[issue_number]: Short description of the fix
 ## 🎉 Join The Project Team
 
 ---
-Interested in joining the team? Let us know! We’re always open to contributors willing to take on bigger roles in the project.⭐
+Interested in joining the team? Let us know! We’re always open to contributors willing to take on bigger roles in the project.
